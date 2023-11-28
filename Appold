@@ -1,0 +1,126 @@
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import PopupMenu from './popMenu';
+import { Header } from 'react-native-elements';
+const InlineMenu = () => {
+  const menuItems = ['Entertainment', 'Sports', 'Politics', 'Uncategorized', 'Businesses'];
+
+  return (
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.inlineMenu}>
+      {menuItems.map((item, index) => (
+        <Text key={index} style={styles.inlineMenuItem}>
+          {item}
+        </Text>
+      ))}
+    </ScrollView>
+  );
+};
+
+const App = () => {
+  return (
+    <View style={styles.container}>
+        <View style={styles.topContainer}>
+	  <PopupMenu/>
+        </View>
+	  <Header
+	  placement="left"
+	  leftComponent={{ icon: 'menu', color: '#fff' }}
+	  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+	  rightComponent={<PopupMenu/>}
+	  />
+
+      <View style={styles.whiteContainer}>
+        <Text style={styles.dateText}>November 23, 2023</Text>
+        <Text style={styles.breakingNewsText}>Breaking News</Text>
+      </View>
+      <View style={styles.pinkContainer}>
+        <View style={styles.pinkLeftContainer}>
+          <Text style={styles.pinkLeftText}>Raynewsroom</Text>
+          <Text style={styles.pinkSubLeftText}>Your number one channel</Text>
+        </View>
+        <View style={styles.pinkRightContainer}>
+          <Text style={styles.pinkRightText}>Search</Text>
+        </View>
+      </View>
+      <View style={styles.whiteContainer}>
+        <Text>Ads.</Text>
+      </View>
+      <View style={styles.whiteContainer}>
+        <InlineMenu />
+      </View>
+      <View style={styles.bodyContainer}></View>
+      <View style={styles.footerContainer}></View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+  },
+  topContainer: {
+    height: 55,
+    backgroundColor: 'black',
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: 'white',
+  },
+  whiteContainer: {
+    height: 80,
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    paddingLeft: 20,
+  },
+  dateText: {
+    fontSize: 14,
+    marginBottom: 5,
+  },
+  breakingNewsText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  pinkContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 15,
+    height: 140,
+    backgroundColor: 'pink',
+  },
+  pinkLeftContainer: {
+    alignItems: 'flex-start',
+  },
+  pinkLeftText: {
+    fontSize: 45,
+    marginBottom: 3,
+    fontWeight: 'bold',
+  },
+  pinkSubLeftText: {
+    fontSize: 14,
+  },
+  pinkRightContainer: {
+    alignItems: 'flex-end',
+    marginTop: 40,
+  },
+  pinkRightText: {},
+  inlineMenu: {
+    flexDirection: 'row',
+    marginTop: 40,
+  },
+  inlineMenuItem: {
+    marginRight: 50,
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  bodyContainer: {
+    flex: 1,
+    backgroundColor: '#eee',
+  },
+  footerContainer: {
+    height: 50,
+    backgroundColor: 'gray',
+  },
+});
+
+export default App;
+

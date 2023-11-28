@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Lorem Ipsum Blog Post",
+    "image": "path/to/image1.jpg",
+    "tags": ["Entertainment", "Uncategorized"],
+    "category": "Entertainment",
+    "date": "2023-11-27",
+    "author": "John Doe",
+    "comments": 5,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
+    "video": false,
+    "readMoreLink": "/post/1"
+  },
+  {
+    "id": 2,
+    "title": "React Native Tips and Tricks",
+    "image": "path/to/image2.jpg",
+    "tags": ["Programming", "Mobile Development"],
+    "category": "Uncategorized",
+    "date": "2023-11-28",
+    "author": "Jane Smith",
+    "comments": 10,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
+    "video": true,
+    "readMoreLink": "/post/2"
+  },
+  {
+    "id": 3,
+    "title": "New Blog Post",
+    "image": "path/to/image3.jpg",
+    "tags": ["Sports", "Uncategorized"],
+    "category": "Sports",
+    "date": "2023-11-29",
+    "author": "Alice Johnson",
+    "comments": 8,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...",
+    "video": false,
+    "readMoreLink": "/post/3"
+  }
+]
+

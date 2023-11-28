@@ -1,0 +1,60 @@
+// Button.js
+import React, {useState} from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+
+const Button = () => {
+
+  const styles = StyleSheet.create({
+    menuText: {
+      color: 'white',
+      fontSize: 16,
+    },
+  menuButton: {
+    position: 'absolute',
+    top: 0.1,
+    right: 1,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'pink',
+  },
+  closeButton: {
+    backgroundColor: 'rgba(255, 182, 193, 0.7)',
+  },
+  });
+
+const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const handleMenuClose = () => {
+    setMenuOpen(false);
+  };
+
+  return (
+      <View onPressIn={toggleMenu} style={styles.menuButton}>
+        {isMenuOpen ? (
+          <View style={[styles.menuButton, styles.closeButton]}>
+            <Text style={styles.menuText}>Close</Text>
+          </View>
+        ) : (
+          <View style={styles.menuButton}>
+            <Text style={styles.menuText}>Menu</Text>
+          </View>
+        )}
+      </View>
+  );
+}
+
+export default Button;
+
+I removed TouchableOpscity it worked but them the menu and close are not changing but I have several ideas you can try so I want three different codes
+1. May be the styling made the TouchableOpscity flow out
+2. Use of alot of View
+3. try these code but make the menu close to change when pressed 
