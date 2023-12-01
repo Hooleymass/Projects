@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const WhiteComponent = ({ children }) => {
+const InlineComponent = ({ children }) => {
 	return(
   <View style={ styles.WhiteComponent }>
 	{ children }
@@ -11,12 +11,12 @@ const WhiteComponent = ({ children }) => {
 
 const styles = ({
   WhiteComponent: {
-    height: 80,
+    height: 100,
     backgroundColor: '#fcfcfc',
     justifyContent: 'center',
     paddingLeft: 20,
   },
 });
 
-export default WhiteComponent;
+export default InlineComponent;
 

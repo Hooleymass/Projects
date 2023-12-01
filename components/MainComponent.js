@@ -17,7 +17,7 @@ const MainComponent = () => {
             <Icon
               name="play-circle"
               type="font-awesome"
-              color="pink"
+              color="#f4baae"
               size={30}
               containerStyle={{ position: 'absolute', top: 10, right: 10 }}
             />
@@ -25,7 +25,7 @@ const MainComponent = () => {
             <Icon
               name="image"
               type="font-awesome"
-              color="pink"
+              color="#f4baae"
               size={30}
               containerStyle={{ position: 'absolute', top: 10, right: 10 }}
             />
@@ -52,7 +52,7 @@ const MainComponent = () => {
               borderRadius: 5,
               alignItems: 'center',
               marginTop: 10,
-              backgroundColor: 'pink',
+              backgroundColor: '#f4baae',
               padding: 10,
               borderRadius: 5,
               alignItems: 'center',

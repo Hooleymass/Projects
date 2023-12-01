@@ -6,6 +6,7 @@ import {
   HeaderComponent,
   WhiteComponent,
   PinkComponent,
+  InlineComponent,
   MainComponent,
   FooterComponent,
 } from './components';
@@ -21,9 +22,9 @@ const Raynews = () => {
           <DateComponent />
         </WhiteComponent>
         <PinkComponent />
-        <WhiteComponent>
+        <InlineComponent>
           <InlineMenu />
-        </WhiteComponent>
+        </InlineComponent>
         <MainComponent />
         <FooterComponent />
       </ScrollView>

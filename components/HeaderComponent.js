@@ -1,33 +1,62 @@
-import React from 'react';
-import { Header, Icon } from 'react-native-elements';
-import { Text } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View } from 'react-native';
+import { Header } from 'react-native-elements';
 import { Menu, MenuTrigger, MenuOptions, MenuOption } from 'react-native-popup-menu';
 import Button from '../Button';
 
 const HeaderComponent = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const handleOptionSelect = (option) => {
+    alert(option);
+    setMenuOpen(false);
+  };
+
+  const menuStyles = {
+    optionsContainer: {
+      marginTop: 1,
+    },
+    optionsWrapper: {
+      padding: 10,
+    },
+  };
+  const textStyles = {
+    color: 'black',
+    fontSize: 14,
+    left: 15,
+    paddingVertical: 14,
+  };
+
   return (
     <Header
-      leftComponent={{ icon: 'menu', color: '#fff' }}
-      centerComponent={{ text: 'Your App Name', style: { color: '#fff' } }}
       rightComponent={
-        <Menu>
-          <MenuTrigger>
-            <Button />
-          </MenuTrigger>
-          <MenuOptions>
-            <MenuOption onSelect={() => alert('Option 1')}>
-              <Text>Option 1</Text>
-            </MenuOption>
-            <MenuOption onSelect={() => alert('Option 2')}>
-              <Text>Option 2</Text>
-            </MenuOption>
-          </MenuOptions>
-        </Menu>
+        <View>
+          <Button onPress={toggleMenu} isMenuOpen={isMenuOpen} />
+          <Menu opened={isMenuOpen} onBackdropPress={toggleMenu}>
+            <MenuTrigger />
+            <MenuOptions customStyles={menuStyles}>
+              <MenuOption onSelect={() => handleOptionSelect('Home')}>
+                <Text style={textStyles}>Home</Text>
+              </MenuOption>
+              <MenuOption onSelect={() => handleOptionSelect('Sports')}>
+                <Text style={textStyles}>Sports</Text>
+              </MenuOption>
+              <MenuOption onSelect={() => handleOptionSelect('Entertainment')} >
+                <Text style={textStyles}>Entertainment</Text>
+              </MenuOption>
+            </MenuOptions>
+          </Menu>
+        </View>
       }
       containerStyle={{
-        backgroundColor: '#333333', // rgb(51,51,51,255)
+        backgroundColor: '#333333',
         justifyContent: 'space-around',
       }}
+	  lighting="dark"
     />
   );
 };

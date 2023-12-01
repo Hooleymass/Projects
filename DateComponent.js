@@ -10,7 +10,7 @@ const DateComponent = () => {
     <SafeAreaView>
       <View style={styles.container}>
         <View style={styles.iconContainer}>
-          <Icon name='calendar' type='font-awesome' color='pink' size={20} />
+          <Icon name='calendar' type='font-awesome' color='#f4baae' size={20} />
         </View>
         <Text style={styles.dateText}>
           {new Date().toLocaleDateString('en-US', {
@@ -22,9 +22,9 @@ const DateComponent = () => {
       </View>
       <View style={styles.container}>
         <View style={styles.iconContainer}>
-          <Icon name='wifi' type='font-awesome' color='pink' size={20} />
+          <Icon name='wifi' type='font-awesome' color='#f4baae' size={20} />
         </View>
-            <Text style={{ fontWeight: 'bold' }}>Breaking News: </Text>
+            <Text style={{ fontWeight: 'bold' }}>Breaking News </Text>
 	  {/* <View style={{ width: '100%', overflow: 'hidden'}}>
 	  <MarqueeLabel  scrollDuration={3.0} >
 	     <FlatList
@@ -49,7 +49,7 @@ const styles = {
   },
   iconContainer: {
     marginRight: 5,
-    marginLeft: 5,
+    marginLeft: -6,
   },
   dateText: {
     fontSize: 14,
